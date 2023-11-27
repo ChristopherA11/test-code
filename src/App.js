@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import UseEffectExample from './UseEffectExample';
 
-function App() {
+
+function App({onClick}) {
+  
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +21,10 @@ function App() {
         >
           Learn React
         </a>
+        <UseEffectExample />
+        <div data-testid="hello">everyOne</div>
+        
+        <button onClick={onClick}>click</button>
       </header>
     </div>
   );

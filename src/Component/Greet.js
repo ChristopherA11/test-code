@@ -7,7 +7,7 @@ const Greet = () => {
     <div>
       Hello
       <Grets 
-      title= "John"/>
+      name= "John"/>
     </div>
   )
 }

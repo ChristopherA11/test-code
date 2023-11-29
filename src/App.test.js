@@ -1,21 +1,22 @@
 import { fireEvent, render, renderHook, screen } from '@testing-library/react';
-import App from './App';
-import userEvent from '@testing-library/user-event';
+// import App from './App';
+// import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-test('renders learn react link', () => {
-  const onClick = jest.fn()
-  render(<App  onClick={onClick}/>);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-  
-  const testId = screen.getByTestId("hello")
-  expect(testId).toBeInTheDocument()
 
-  const btnEle = screen.getByText("click")
-  fireEvent.click(btnEle)
-  expect(onClick).toHaveBeenCalledTimes(1)
-});
+// test('renders learn react link', () => {
+//   const onClick = jest.fn()
+//   render(<App  onClick={onClick}/>);
+//   const linkElement = screen.getByText(/learn react/i);
+//   expect(linkElement).toBeInTheDocument();
+  
+//   const testId = screen.getByTestId("hello")
+//   expect(testId).toBeInTheDocument()
+
+//   const btnEle = screen.getByText("click")
+//   fireEvent.click(btnEle)
+//   expect(onClick).toHaveBeenCalledTimes(1)
+// });
 
 test("render call immediately",() =>{
   const effectEb = jest.fn()

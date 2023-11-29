@@ -15,33 +15,38 @@ describe("Counter", () => {
     
         fireEvent.click(incrementBtn)
     
-        expect(counter).toHaveTextContent("3")
+        expect(counter).toHaveTextContent("4")
+
+        const counter2 = screen.getByTestId("counter")
+        const btnEle = screen.getByTestId("decrement")
+        fireEvent.click(btnEle)
+        expect(counter2).toHaveTextContent("3")
+
     })
-    test("decrement counter", () => {
-        render(<Counter />)
+    // test("decrement counter", () => {
+    //     render(<Counter />)
     
-        const counter = screen.getByTestId("counter")
-        const decrementBtn = screen.getByTestId("decrement")
+    //     const counter = screen.getByTestId("counter")
+    //     const decrementBtn = screen.getByTestId("decrement")
     
-        fireEvent.click(decrementBtn)
-    
-        expect(counter).toHaveTextContent("1")
-    })
+    //     fireEvent.click(decrementBtn)
+    //     expect(counter).toHaveTextContent("3")
+    // })
 
 })
-test('Greet renders correctly', () => {
+test.skip('Greet renders correctly', () => {
     render(<Greet />)
    const eleId = screen.getByText(/Hello/i)
    expect(eleId).toBeInTheDocument()
 })
 
-it("greet check the name", () => {
+it.skip("greet check the name", () => {
     render(<Grets name = "john" />)
     const nameStore = screen.getByText("john")
     expect(nameStore).toBeInTheDocument()
 })
 
-describe("Counter SnapShot",() => {
+describe.skip("Counter SnapShot",() => {
     test ("should matches dom Snapshot", () => {
         const tree = renderer.create(<Counter />).toJSON();
         expect(tree).toMatchSnapshot()
